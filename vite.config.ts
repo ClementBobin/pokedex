@@ -6,6 +6,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Sur GitHub Pages l'app est servie sous /<nom-du-repo>/ (injecté par le workflow)
+  base: process.env.BASE_PATH ?? '/',
   plugins: [
     vue(),
     vueDevTools(),

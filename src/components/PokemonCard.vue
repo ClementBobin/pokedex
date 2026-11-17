@@ -2,7 +2,9 @@
 import { RouterLink } from 'vue-router'
 import type { Pokemon } from '../types'
 
-defineProps<{ pokemon: Pokemon }>()
+defineProps<{
+  pokemon: Pokemon
+}>()
 </script>
 
 <template>
