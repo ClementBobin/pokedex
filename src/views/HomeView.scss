@@ -1,0 +1,55 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+
+  input[type='search'] {
+    padding: 10px 14px;
+    min-width: 260px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: inherit;
+    font-size: 0.95rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 16px;
+}
+
+.state {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 0;
+
+  &.error {
+    color: #d33;
+  }
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+
+  button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+}
