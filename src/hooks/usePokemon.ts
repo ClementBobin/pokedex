@@ -2,7 +2,6 @@ import { ref, watch, type Ref } from 'vue'
 import { fetchPokemon } from '../lib/tyradex'
 import type { Pokemon } from '../types'
 
-/** Charge la fiche d'un Pokémon et la recharge quand `id` change. */
 export function usePokemon(id: Ref<string>) {
   const pokemon = ref<Pokemon | null>(null)
   const loading = ref(true)

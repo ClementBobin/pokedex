@@ -6,13 +6,11 @@ export interface PokemonContext {
   pokemons: Ref<Pokemon[]>
   loading: Ref<boolean>
   error: Ref<string | null>
-  /** Charge la liste une seule fois (appels suivants ignorés). */
   load: () => Promise<void>
 }
 
 export const PokemonContextKey: InjectionKey<PokemonContext> = Symbol('pokemon-context')
 
-/** À appeler une fois dans App.vue : partage la liste entre toutes les vues. */
 export function providePokemonContext(): PokemonContext {
   const pokemons = ref<Pokemon[]>([])
   const loading = ref(false)
